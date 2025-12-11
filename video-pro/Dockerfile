@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /app
 
 # Copy package.json and package - lock.json into working directory
-COPY package*.json 
+COPY package*.json ./
 
 # Install ffmpeg in the container
 RUN apt-get update && apt-get install -y ffmpeg
@@ -14,10 +14,12 @@ RUN apt-get update && apt-get install -y ffmpeg
 RUN npm install
 
 # Copy app source inside the docker image
-COPY ...
+COPY . .
 
-# Make port 3000 available outside this  container
-EXPOSE 3000
+RUN npm run build
+
+# Make port 8080(for cloud run else 3000 for local) available outside this  container
+EXPOSE 8080
 
 # Define  the command to run your app using CMD (only one CMD  allowed)
-CMD ["npm, 'start"]
+CMD ["node", "dist/index.js"]
