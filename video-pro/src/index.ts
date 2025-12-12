@@ -1,12 +1,12 @@
 import express from "express";
 import ffmpeg from "fluent-ffmpeg";
-import { 
-    downloadRawVideo, 
-    setUpDirectories, 
-    uploadProcessedVideo, 
-    convertVideo, 
-    deleteRawVideo, 
-    deleteProcessedVideo 
+import {
+    downloadRawVideo,
+    setUpDirectories,
+    uploadProcessedVideo,
+    convertVideo,
+    deleteRawVideo,
+    deleteProcessedVideo
 } from "./storage";
 
 // Setup local /tmp directories
