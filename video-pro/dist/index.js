@@ -22,7 +22,7 @@ fluent_ffmpeg_1.default.setFfmpegPath("/usr/bin/ffmpeg");
 console.log("Using FFMPEG at /usr/bin/ffmpeg");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.post("/process-video", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     let data;
     try {
         const message = Buffer.from(req.body.message.data, "base64").toString("utf8");

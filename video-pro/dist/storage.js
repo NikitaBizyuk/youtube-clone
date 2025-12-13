@@ -25,8 +25,8 @@ const fs_1 = __importDefault(require("fs"));
 const fluent_ffmpeg_1 = __importDefault(require("fluent-ffmpeg"));
 const storage = new storage_1.Storage();
 // Your Cloud Storage buckets
-const rawVideoBucketName = "neetcode-yt-raw-vidoes";
-const processedVideoBucketName = "neetcode-yt-processed-videos";
+const rawVideoBucketName = "neetcode_yt_raw_videos";
+const processedVideoBucketName = "neetcode_yt_processed_videos";
 // Cloud Run can ONLY write to /tmp
 const localRawVideoPath = "/tmp/raw-videos";
 const localProcessedVideoPath = "/tmp/processed-videos";

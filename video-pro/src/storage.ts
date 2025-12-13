@@ -7,7 +7,7 @@ import ffmpeg from 'fluent-ffmpeg';
 const storage = new Storage();
 
 // Your Cloud Storage buckets
-const rawVideoBucketName = "neetcode_yt_raw_vidoes";
+const rawVideoBucketName = "neetcode_yt_raw_videos";
 const processedVideoBucketName = "neetcode_yt_processed_videos";
 
 // Cloud Run can ONLY write to /tmp
